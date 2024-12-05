@@ -20,7 +20,8 @@ public class TestController {
         return testNames;
     }
 
-    @ApiEndpoint(POST = "/run", desc = "runs test")
+    @ApiEndpoint(POST = "/run", desc = "runs test",
+            params = @ApiEndpoint.Param(name = "testName", desc = "name of test"))
     public String runTestByName(@RequestParam String testName) {
         try {
             testManager.runTestByName(testName);

@@ -62,6 +62,10 @@
                   <outputDir>lib</outputDir>
                   <include>${project.build.directory}/${project.artifactId}-${project.version}.jar</include>
                 </copyConfig>
+                <copyConfig>
+                  <outputDir>/</outputDir>
+                  <include>descriptor.json</include>
+                </copyConfig>
               </copy>
             </configuration>
           </execution>
